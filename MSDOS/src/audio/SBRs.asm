@@ -5,7 +5,7 @@ EXTRN status:WORD, primAd:WORD, backAd:WORD
 .CODE
 
 PUBLIC OPLWriteImpl
-OPLWriteImpl PROC FAR C argument:DWORD, regnum:WORD, regval:BYTE
+OPLWriteImpl PROC FAR argument:DWORD, regnum:WORD, regval:BYTE
 
 mov bx,regnum
 mov cl,regval

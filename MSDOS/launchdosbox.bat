@@ -1,0 +1,1 @@
+D:\Software\DOSBox-0.74-2\DOSBox.exe -conf dosboxconf.conf

@@ -1,0 +1,1 @@
+del /q /f *.obj psy.exe

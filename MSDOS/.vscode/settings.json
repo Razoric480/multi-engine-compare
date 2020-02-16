@@ -1,0 +1,41 @@
+{
+    "files.associations": {
+        "MAIN.C": "c",
+        "PSYCHICMAIN.C": "c",
+        "PSYMAIN.C": "c",
+        "alloc.h": "c",
+        "linklist.h": "c",
+        "types.h": "c",
+        "dir.h": "c",
+        "ctype.h": "c",
+        "SBTEST.C": "c",
+        "dos.h": "c",
+        "stdlib.h": "c",
+        "LZH.C": "cpp",
+        "error.h": "c",
+        "memory": "c",
+        "mem.h": "c",
+        "time.h": "c",
+        "audctrl.h": "c",
+        "engine.h": "c",
+        "bmpfile.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "render.h": "c"
+    },
+    "cSpell.ignoreWords": [
+        "getvect",
+        "import",
+        "sblaster",
+        "setvect",
+    ],
+    "todohighlight.isEnable": true,
+    "todohighlight.include": [
+        "**/*.c",
+        "**/*.h"
+    ],
+    "files.exclude": {
+        "**/obj":true,
+        "**/bin":true
+    }
+}

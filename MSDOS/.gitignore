@@ -1,0 +1,14 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.exe
+*.com
+*.BAK
+*.SWP
+*.OBJ
+/bin
+/obj
+!love.exe
+!cwsdpmi.exe

@@ -33,56 +33,57 @@ int main() {
 #include "tiles\Tilemap.h"
 
 int main() {
-    /*PCXFile sheet;
-    unsigned char* linearData;
-    unsigned char* planarData;
-    unsigned char* compiledData;
-    unsigned char* videoData;
-    unsigned char* row;
-    unsigned int compiledSize;
-    int i, j;
-    x_set_mode(X_MODE_320x240, 328);
-    x_set_cliprect(1,0, 80, 240);
-    x_set_start_addr(4, 0);
+    // PCXFile sheet;
+    // unsigned char* linearData;
+    // unsigned char* planarData;
+    // unsigned char* compiledData;
+    // unsigned char* videoData;
+    // unsigned char* row;
+    // unsigned int compiledSize;
+    // int i, j;
+    // x_set_mode(X_MODE_320x240, 328);
+    // x_set_cliprect(1,0, 80, 240);
+    // x_set_start_addr(4, 0);
 
 
-    PCXFile_loadFile("assets\\ssheet.pcx", &sheet);
-    linearData = (unsigned char*)calloc(44*52+2, 1);
-    linearData[0] = 40;
-    linearData[1] = 52;
-    for(i=0; i<52; ++i) {
-        memcpy(linearData+2+(i*40), sheet->data+(i*sheet->width), 40);
-    }
-    for(i=1; i<256; ++i) {
-        x_set_rgb(i, sheet->palette[i].r, sheet->palette[i].g, sheet->palette[i].b);
-    }
+    // PCXFile_loadFile("assets\\ssheet.pcx", &sheet);
+    // linearData = (unsigned char*)calloc(44*52+2, 1);
+    // linearData[0] = 40;
+    // linearData[1] = 52;
+    // for(i=0; i<52; ++i) {
+    //     memcpy(linearData+2+(i*40), sheet->data+(i*sheet->width), 40);
+    // }
+    // for(i=1; i<256; ++i) {
+    //     x_set_rgb(i, sheet->palette[i].r, sheet->palette[i].g, sheet->palette[i].b);
+    // }
     
-    planarData = (unsigned char*)malloc(linearData[0]*linearData[1]*4+2);
-    x_bm_to_pbm(linearData, planarData);
-    compiledSize = x_sizeof_cbitmap(ScrnLogicalByteWidth, linearData);
-    compiledData = (unsigned char*)malloc(compiledSize);
-    x_compile_bitmap(ScrnLogicalByteWidth, linearData, compiledData);
-    videoData = x_make_vbm(linearData, (&NonVisual_Offs)+ScrnLogicalByteWidth+240);
+    // planarData = (unsigned char*)malloc(linearData[0]*linearData[1]*4+2);
+    // x_bm_to_pbm(linearData, planarData);
+    // compiledSize = x_sizeof_cbitmap(ScrnLogicalByteWidth, linearData);
+    // compiledData = (unsigned char*)malloc(compiledSize);
+    // x_compile_bitmap(ScrnLogicalByteWidth, linearData, compiledData);
+    // videoData = x_make_vbm(linearData, (&NonVisual_Offs)+ScrnLogicalByteWidth+240);
 
-    for(i=4; i<320; i += 40) {
-        for(j=0; j<480-52; j += 52) {
-            /*x_put_cbitmap(i, j, 0, compiledData);*/
-            /*x_put_pbm(i, j, 0, planarData);*/
-  /*          x_put_masked_vbm(i, j, 0, videoData);
-        }
-    }
+    // for(i=4; i<320; i += 40) {
+    //     for(j=0; j<480-52; j += 52) {
+    //         /*x_put_cbitmap(i, j, 0, compiledData);*/
+    //         /*x_put_pbm(i, j, 0, planarData);*/
+    //         x_put_masked_vbm(i, j, 0, videoData);
+    //     }
+    // }
     
-    while(!kbhit()) {
+    // while(!kbhit()) {
         
-    }
+    // }
 
-    x_text_mode();
+    // x_text_mode();
 
-    free(linearData);
-    free(compiledData);
-    free(planarData);
-    free(videoData);
-    PCXFile_free(&sheet);*/
+    // free(linearData);
+    // free(compiledData);
+    // free(planarData);
+    // free(videoData);
+    // PCXFile_free(&sheet);
+
     TileMapPtr tilemap;
     TilesetPtr tileset;
     PCXFile palette;

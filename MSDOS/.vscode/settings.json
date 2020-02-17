@@ -1,41 +1,24 @@
 {
-    "files.associations": {
-        "MAIN.C": "c",
-        "PSYCHICMAIN.C": "c",
-        "PSYMAIN.C": "c",
-        "alloc.h": "c",
-        "linklist.h": "c",
-        "types.h": "c",
-        "dir.h": "c",
-        "ctype.h": "c",
-        "SBTEST.C": "c",
-        "dos.h": "c",
-        "stdlib.h": "c",
-        "LZH.C": "cpp",
-        "error.h": "c",
-        "memory": "c",
-        "mem.h": "c",
-        "time.h": "c",
-        "audctrl.h": "c",
-        "engine.h": "c",
-        "bmpfile.h": "c",
-        "string.h": "c",
-        "stdio.h": "c",
-        "render.h": "c"
-    },
-    "cSpell.ignoreWords": [
-        "getvect",
-        "import",
-        "sblaster",
-        "setvect",
-    ],
+    "cSpell.ignoreWords": ["getvect", "import", "sblaster", "setvect"],
     "todohighlight.isEnable": true,
-    "todohighlight.include": [
-        "**/*.c",
-        "**/*.h"
-    ],
+    "todohighlight.include": ["**/*.c", "**/*.h"],
     "files.exclude": {
-        "**/obj":true,
-        "**/bin":true
+        "**/obj": true,
+        "**/bin": true,
+        "**/builder": true,
+        "**/OBJ": true,
+        "**/BIN": true,
+        "**/lib": true,
+        "MAKEFILE": true,
+        "RUNTIME": true,
+        "LISTLIBS": true,
+        "LISTOBJS": true,
+        "RZRCA.PRJ": true,
+        "SOURCES.MAC": true,
+        "EXEC": true,
+    },
+    "exclude": "{**/node_modules/**,**/bower_components/**,**/dist/**,**/build/**,**/.vscode/**,**/_output/**,**/vendor/**,**/*.min.*,**/*.map}",
+    "files.associations": {
+        "MAIN.C": "c"
     }
 }

@@ -10,5 +10,3 @@
 *.OBJ
 /bin
 /obj
-!love.exe
-!cwsdpmi.exe

@@ -1,76 +1,76 @@
 !include "SOURCES.MAC"
 
-bin\psychics.exe: $(srcs)
+bin\GAME.EXE: $(srcs)
     tlink /c /s @RUNTIME @LISTOBJS , @EXEC , @EXEC , @LISTLIBS
 
-obj\Error.obj: src\Error.c
-	tcc -ml -G -nobj -c -Isrc src\Error.c
+obj\AudCtrl.obj: .\src\audio\AudCtrl.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\AudCtrl.c
 
-obj\Timer.obj: src\Timer.c
-	tcc -ml -G -nobj -c -Isrc src\Timer.c
+obj\FMSynth.obj: .\src\audio\FMSynth.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\FMSynth.c
 
-obj\DMA.obj: src\memory\DMA.c
-	tcc -ml -G -nobj -c -Isrc src\memory\DMA.c
+obj\RADFile.obj: .\src\audio\RADFile.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\RADFile.c
 
-obj\PMem.obj: src\memory\PMem.c
-	tcc -ml -G -nobj -c -Isrc src\memory\PMem.c
+obj\RADPlay.obj: .\src\audio\RADPlay.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\RADPlay.c
 
-obj\Key.obj: src\input\Key.c
-	tcc -ml -G -nobj -c -Isrc src\input\Key.c
+obj\SBlaster.obj: .\src\audio\SBlaster.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\SBlaster.c
 
-obj\Joy.obj: src\input\Joy.c
-	tcc -ml -G -nobj -c -Isrc src\input\Joy.c
+obj\SBRs.obj: .\src\audio\SBRs.asm
+    tcc -ml -G -nobj -c -Isrc .\src\audio\SBRs.asm
 
-obj\AudCtrl.obj: src\audio\AudCtrl.c
-	tcc -ml -G -nobj -c -Isrc src\audio\AudCtrl.c
+obj\WAVFile.obj: .\src\audio\WAVFile.c
+    tcc -ml -G -nobj -c -Isrc .\src\audio\WAVFile.c
 
-obj\SBlaster.obj: src\audio\SBlaster.c
-	tcc -ml -G -nobj -c -Isrc src\audio\SBlaster.c
+obj\Engine.obj: .\src\Engine.c
+    tcc -ml -G -nobj -c -Isrc .\src\Engine.c
 
-obj\FMSynth.obj: src\audio\FMSynth.c
-	tcc -ml -G -nobj -c -Isrc src\audio\FMSynth.c
+obj\Error.obj: .\src\Error.c
+    tcc -ml -G -nobj -c -Isrc .\src\Error.c
 
-obj\RADFile.obj: src\audio\RADFile.c
-	tcc -ml -G -nobj -c -Isrc src\audio\RADFile.c
+obj\Game.obj: .\src\Game.c
+    tcc -ml -G -nobj -c -Isrc .\src\Game.c
 
-obj\RADPlay.obj: src\audio\RADPlay.c
-	tcc -ml -G -nobj -c -Isrc src\audio\RADPlay.c
+obj\Animator.obj: .\src\graphics\Animator.c
+    tcc -ml -G -nobj -c -Isrc .\src\graphics\Animator.c
 
-obj\WAVFile.obj: src\audio\WAVFile.c
-	tcc -ml -G -nobj -c -Isrc src\audio\WAVFile.c
+obj\BMPFile.obj: .\src\graphics\BMPFile.c
+    tcc -ml -G -nobj -c -Isrc .\src\graphics\BMPFile.c
 
-obj\PCXFile.obj: src\graphics\PCXFile.c
-	tcc -ml -G -nobj -c -Isrc src\graphics\PCXFile.c
+obj\PCXFile.obj: .\src\graphics\PCXFile.c
+    tcc -ml -G -nobj -c -Isrc .\src\graphics\PCXFile.c
 
-obj\BMPFile.obj: src\graphics\BMPFile.c
-	tcc -ml -G -nobj -c -Isrc src\graphics\BMPFile.c
+obj\render.obj: .\src\graphics\render.c
+    tcc -ml -G -nobj -c -Isrc .\src\graphics\render.c
 
-obj\Render.obj: src\graphics\Render.c
-	tcc -ml -G -nobj -c -Isrc src\graphics\Render.c
+obj\Joy.obj: .\src\input\Joy.c
+    tcc -ml -G -nobj -c -Isrc .\src\input\Joy.c
 
-obj\Matrix.obj: src\types\Matrix.c
-	tcc -ml -G -nobj -c -Isrc src\types\Matrix.c
+obj\Key.obj: .\src\input\Key.c
+    tcc -ml -G -nobj -c -Isrc .\src\input\Key.c
 
-obj\Engine.obj: src\Engine.c
-	tcc -ml -G -nobj -c -Isrc src\Engine.c
+obj\MAIN.obj: .\src\MAIN.C
+    tcc -ml -G -nobj -c -Isrc .\src\MAIN.C
 
-obj\Game.obj: src\Game.c
-	tcc -ml -G -nobj -c -Isrc src\Game.c
+obj\DMA.obj: .\src\memory\DMA.c
+    tcc -ml -G -nobj -c -Isrc .\src\memory\DMA.c
 
-obj\MAIN.obj: src\MAIN.c
-	tcc -ml -G -nobj -c -Isrc src\MAIN.c
+obj\PMem.obj: .\src\memory\PMem.c
+    tcc -ml -G -nobj -c -Isrc .\src\memory\PMem.c
 
-obj\Types.obj: src\types\Types.c
-	tcc -ml -G -nobj -c -Isrc src\types\Types.c
+obj\Tilemap.obj: .\src\tiles\Tilemap.c
+    tcc -ml -G -nobj -c -Isrc .\src\tiles\Tilemap.c
 
-obj\LinkList.obj: src\types\LinkList.c
-	tcc -ml -G -nobj -c -Isrc src\types\LinkList.c
+obj\Timer.obj: .\src\Timer.c
+    tcc -ml -G -nobj -c -Isrc .\src\Timer.c
 
-obj\SBRs.obj: src\audio\SBRs.asm
-	tcc -ml -G -nobj -c -Isrc src\audio\SBRs.asm
+obj\LinkList.obj: .\src\types\LinkList.c
+    tcc -ml -G -nobj -c -Isrc .\src\types\LinkList.c
 
-obj\Animator.obj: src\graphics\Animator.c
-	tcc -ml -G -nobj -c -Isrc src\graphics\Animator.c
+obj\Matrix.obj: .\src\types\Matrix.c
+    tcc -ml -G -nobj -c -Isrc .\src\types\Matrix.c
 
-obj\TileMap.obj: src\tiles\TileMap.c
-	tcc -ml -G -nobj -c -Isrc src\tiles\TileMap.c
+obj\Types.obj: .\src\types\Types.c
+    tcc -ml -G -nobj -c -Isrc .\src\types\Types.c

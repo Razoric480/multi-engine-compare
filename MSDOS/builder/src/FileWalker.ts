@@ -63,6 +63,13 @@ export class FileWalker {
             fs.writeFileSync(`${outPath}\\RUNTIME`, runtimeMac);
             fs.writeFileSync(`${outPath}\\MAKEFILE`, make);
             fs.writeFileSync(`${outPath}\\RZRCA.PRJ`, projFile);
+            
+            if(!fs.existsSync(`${outPath}\\OBJ`)) {
+                fs.mkdirSync(`${outPath}\\OBJ`);
+            }
+            if(!fs.existsSync(`${outPath}\\BIN`)) {
+                fs.mkdirSync(`${outPath}\\BIN`);
+            }
         });
     }
 }
